@@ -13,7 +13,13 @@ public class Sjf extends Planificador {
     @Override protected Proceso elegir(List<Proceso> listos) {
         return listos.stream().min(CRITERIO).get();
     }
-    @Override protected boolean agotaTurno(int usadoEnTurno) { return false; }
-    @Override public String nombre() { return "SJF (sin desalojo)"; }
+
+    @Override protected boolean agotaTurno(int usadoEnTurno) {
+        return false;
+    }
+
+    @Override public String nombre() {
+        return "SJF (sin desalojo)";
+    }
 
 }
